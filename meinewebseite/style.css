@@ -1,0 +1,364 @@
+/* * = alle Elemente
+box-sizing: border-box; = Padding und Rahmen (Border) 
+werden in die angegebene Breite und HÃ¶he eingerechnet. */
+ 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    padding: 0;
+    background: #f6f8f5;
+    color: #444;
+    font-family: "Playfair Display", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+ /* ===== LOGO ===== */
+
+ 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+ 
+.header__logo {
+    width: 50px;        
+    height: 50px;
+    object-fit: cover;  /* Bild wird sauber zugeschnitten */
+    border-radius: 50%; /* Rundes Logo */
+}
+ 
+header {
+    top: 0;
+    background-color: #2c3e50;
+    color: white;
+    padding: 8px 25px;
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* bleibt auf Laptop/Desktop kompakt in einer Zeile */
+
+    height: 60px;
+}
+ 
+nav {
+    width: 100%;
+}
+ 
+nav ul {
+    display: flex;
+    justify-content: flex-end; /* Links ganz nach rechts */
+    flex-wrap: nowrap; /* bleibt auf Laptop/Desktop in einer Zeile */
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+nav a:hover {
+    text-decoration: underline;
+}
+ 
+/* ===== Links ===== */
+ 
+a {
+    color: #2985a1;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+ 
+a:hover {
+    color: #2e8b83;
+    text-decoration: underline;
+}
+
+/* ===== Focus-Styles (Accessibility) ===== */
+/* Sichtbarer  interaktiven Elemente,
+   damit Tastatur-Nutzer erkennen, wo sie sich befinden. */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+.team-card__link:focus {
+    outline: 3px solid #2e8b83;
+    outline-offset: 2px;
+}
+
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+    outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #2e8b83;
+    outline-offset: 2px;
+}
+ 
+/* ===== überschriften ===== */
+ 
+h1 {
+    text-align: center;
+    font-family: "Inter", Georgia, serif;
+    font-size: 4rem;
+    color: #2f6b2f;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+ 
+h2,
+h3 {
+    font-family: "Inter", Georgia, serif;
+    font-size: 2rem;
+    color: #2e8b83;
+    margin-bottom: 15px;
+}
+ 
+#skills {
+    font-family: "Inter", Georgia, serif;
+    color: #2e8b83;
+}
+ 
+/* Text */
+ 
+p,
+ul,
+ol {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    font-family: "Inter", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+
+/* Bild  */
+ 
+img {
+    display: block;
+    margin: 30px auto;
+    width: 460px;
+    height: 260px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+ 
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    font-size: 0.95rem; 
+}
+ 
+/*  Formular  */
+ 
+legend {
+    font-family: "Inter", Georgia, serif;
+    font-size: 1.8rem;
+    color: #2e8b83;
+    font-weight: bold;
+}
+ 
+
+ 
+div {
+    max-width: 900px;
+    width: 100%; /* nimmt auf kleinen Screens die volle Breite an */
+    margin: 30px auto;
+    padding: 30px;
+ 
+    font-family: "Inter", Georgia, serif;
+ 
+    background: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+ 
+/*  Tabelle  */
+
+ 
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* verhindert Layout-Bruch auf kleinen Screens */
+}
+ 
+table {
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 70%;
+    margin: 20px auto; /* Tabelle zentrieren */
+}
+ 
+caption {
+    font-size: 24px;
+}
+ 
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center; /* Text in der Mitte */
+}
+ 
+th {
+    background-color: #559486; 
+}
+ 
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+ 
+tbody tr:hover {
+    background-color: #559486;
+}
+ /*  Button  */
+
+ 
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Buttons brechen um statt sich zu quetschen */
+    gap: 15px;
+}
+ 
+button,
+.team-card__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", Georgia, serif;
+    background: #2e8b83;
+    color: white;
+    border: none;
+ 
+    width: 230px;
+    height: 50px;
+ 
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+ 
+    text-decoration: none;
+    margin-top: 30px;
+ 
+    box-sizing: border-box;
+    transition: .3s;
+}
+ 
+button:hover,
+.team-card__link:hover {
+    background: #2f6b2f;
+}
+ 
+/* FOOTER */
+ 
+footer {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+ 
+    background-color: #2c3e50;
+    color: white;
+    padding: 8px 25px;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: auto;
+    min-height: 60px;
+}
+ 
+footer a {
+    color: white;
+}
+ 
+footer a:hover {
+    color: #dcdcdc;
+    text-decoration: underline;
+}
+
+/* REsponsive designe :  Media  */
+
+/* ----- Tablet (ab 600px) ----- */
+@media (min-width: 600px) {
+
+    h1 {
+        font-size: 3rem; /* etwas kleiner als auf Desktop, aber grösser als Mobile-Basis */
+    }
+}
+
+/* ----- Desktop (ab 1024px) ----- */
+@media (min-width: 1024px) {
+
+    h1 {
+        font-size: 4rem; /* volle Grösse erst auf grossen Screens */
+    }
+
+    nav ul {
+        flex-wrap: nowrap; /* auf Desktop genug Platz, kein Umbruch nötiig */
+    }
+}
+
+/* ----- Smartphone (bis 600px) ----- */
+@media (max-width: 600px) {
+
+    header {
+        flex-wrap: wrap; /* Logo und Nav dürfen hier umbrechen */
+        height: auto;
+        min-height: 60px;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Nav-Links dürfen hier umbrechen */
+        justify-content: center; /* zentriert statt rechtständig - besser bei wenig Platz */
+        gap: 15px;
+    }
+}
+
+/* ----- Sehr kleine Screens (bis 400px) ----- */
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 2.2rem; /* auf sehr kleinen Handys nochmal kleiner */
+    }
+
+    header,
+    footer {
+        padding: 8px 12px; /* weniger Platz für Padding auf kleinen Screens */
+    }
+
+    div {
+        padding: 15px; /* weniger Innenabstand, mehr Platz für Inhalt */
+    }
+}
+

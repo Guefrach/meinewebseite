@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <!-- Seiteneinstellungen -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghassen Guefrach</title>
+    <!-- Google Fonts: Poppins für Überschriften, Inter für Fließtext -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="cssmedia.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+<header class="header">
+    <a href="https://guefrach.github.io/meinewebseite/">
+      <img src="FotoGG.jpeg" alt="Ghassen Guefrach Logo" class="header__logo"></a>
+
+    <nav>
+        <ul class="header__nav">
+            <li><a href="#ueber-mich">Über mich</a></li>
+            <li><a href="#interessen">Interessen</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Überschrift -->
+    <h1>Ghassen Guefrach</h1>
+
+
+    <!-- Über mich -->
+    <h2 id="ueber-mich">Über mich:</h2>
+
+    <p>
+    Mein Name ist Ghassen Guefrach. Ich habe einen Bachelor in Business and Management 
+    sowie einen Master in Management und Digitalisierung von Unternehmen abgeschlossen.
+     Seit meinem Masterabschluss bin ich Mitgründer eines Gaming-Startups, wir haben Apps mit Augmented 
+     und Mixed Reality entwickelt. Unser Ziel ist es, historische Orte und Denkmäler digital erlebbar 
+     zu machen und gleichzeitig das tunesische Kulturerbe zu fördern.
+    </p>
+
+
+    
+
+
+    <!-- Interessen -->
+    <h2 id="interessen">Meine Interessen:</h2>
+
+    <ul>
+        <li>Sport</li>
+        <li>Kino</li>
+        <li>Theater</li>
+        <li>Programmieren</li>
+        <li>Reisen</li>
+    </ul>
+
+
+    <!-- Bild -->
+    <figure>
+        <img src="bild.jpeg" alt="Meer">
+        <figcaption>
+            Es ist immer die Zeit für einen Urlaub!
+        </figcaption>
+    </figure>
+
+
+    <!-- Skills -->
+    <h2 id="skills">Top-3-Skills:</h2>
+
+    <ol>
+        <li>Problemlösung</li>
+        <li>Projektplanung</li>
+        <li>Entwicklung von Marketingstrategien</li>
+    </ol>
+
+
+    <!-- Tabelle -->
+    <table>
+
+        <caption>Meine aktuellen Kenntnisse</caption>
+
+        <thead>
+            <tr>
+            <th scope="col">Thema</th>
+            <th scope="col">Kenntnisstand</th>
+            <th scope="col">Seit wann</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+            <th scope="row">HTML</th>
+            <td>Grundlagen</td>
+            <td>2026</td>
+            </tr>
+
+            <tr>
+            <th scope="row">CSS</th>
+            <td>Einsteiger</td>
+            <td>2025</td>
+            </tr>
+
+            <tr>
+            <th scope="row">Microsoft Word</th>
+            <td>Fortgeschritten</td>
+            <td>2018</td>
+            </tr>
+
+            <tr>
+            <th scope="row">Excel</th>
+            <td>Grundlagen</td>
+            <td>2020</td>
+            </tr>
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3">Stand: 14. Juli 2026</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+
+    <!-- Kontakt -->
+    <h2 id="kontakt">Kontakt:</h2>
+
+    <p>
+        <a href="mailto:ghassen.guefrech@icloud.com">
+            ghassen.guefrech@icloud.com
+        </a>
+        <br>
+
+        <a href="tel:+4915731054268">
+            Telefon: +49 1573 1054268
+        </a>
+    </p>
+
+
+    <!-- Formular -->
+    <form action="/kontakt" method="post">
+
+        <!-- Persönliche Daten -->
+        <fieldset>
+            <legend>Persönliche Daten:</legend>
+
+            <div>
+                <label for="vorname">Vorname *</label>
+                <input type="text" id="vorname" name="vorname" minlength="2" maxlength="50" required>
+            </div>
+
+            <div>
+                <label for="nachname">Nachname *</label>
+                <input type="text" id="nachname" name="nachname" minlength="2" maxlength="50" required>
+            </div>
+
+            <div>
+                <label for="email">E-Mail *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div> 
+            <label for="plz"> Adresse * </label>
+            <input type="text" id ="plz" name="plz" pattern="[0-9]{5}"
+             title="5-stellige Postleitzahl"required>
+            </div>
+
+            <div>
+           <label for="telefon">Telefon *</label>
+           <input type="tel" id="telefon" name="telefon"
+           pattern="[0-9]{12,15}"
+           title="Bitte eine gültige Telefonnummer eingeben"
+           required>
+          </div>
+
+        </fieldset>
+
+        <!-- Nachricht -->
+
+        <fieldset>
+        <legend>Nachricht:</legend>
+
+       <label for="betreff">Betreff *</label>
+
+       <select id="betreff" name="betreff" required>
+        <option value="">Bitte wählen</option>
+        <option value="frage">Allgemeine Frage</option>
+        <option value="feedback">Feedback</option>
+       </select>
+
+        <br><br>
+
+       <label for="nachricht">Nachricht *</label>
+
+       <textarea id="nachricht" name="nachricht"
+              minlength="20" rows="8" cols="50"
+              placeholder="Hallo, ich möchte gerne..."
+              title="Die Nachricht muss mindestens 20 Zeichen enthalten"
+              required></textarea>
+        <br>
+
+
+        <!-- Button -->
+        <button type="submit">
+            Nachricht absenden
+        </button>
+
+      </fieldset>
+
+     </form>
+
+
+    <!-- Zusatzinformationen -->
+    <fieldset>
+
+    <div class="button-container">
+
+        <button onclick="zeigeNachricht()">
+            Mehr Informationen über mich
+        </button>
+
+        <a href="https://elhamehzendedel-eng.github.io/01-ulrich-vollert_html-css/aqualume-startup/" 
+           class="team-card__link">
+            Aqualume
+        </a>
+
+    </div>
+
+</fieldset>
+
+<script>
+    function zeigeNachricht() {
+        alert("Vielen Dank für Ihr Interesse! Ich freue mich über Ihre Nachricht.");
+    }
+</script>
+
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2026 Ghassen Guefrach
+    </footer>
+
+
+   
+
+
+</body>
+</html>
