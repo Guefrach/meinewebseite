@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="übung4.css">
+
+</head>
+<body>
+<p>Element A</p>
+<p class="text">Element B</p>
+<p class="text" id="intro">Element C</p>
+<div class="text">Element D</div>
+</body>
+</html>
+
+Element A
+
+HTML:
+<p>Element A</p>
+
+Zutreffende Regeln:
+- Regel 1: p → blau → 1 Punkt
+- Regel 5: body p → grau → 2 Punkte
+
+Gewinner: Regel 5 (body p) mit 2 Punkten
+Endfarbe: grau
+
+
+Element B
+
+HTML:
+<p class="text">Element B</p>
+
+Zutreffende Regeln:
+- Regel 1: p → blau → 1 Punkt
+- Regel 2: .text → rot → 10 Punkte
+- Regel 3: p.text → grün → 11 Punkte
+- Regel 5: body p → grau → 2 Punkte
+
+Gewinner: Regel 3 (p.text) mit 11 Punkten
+Endfarbe: grün
+
+
+Element C
+
+HTML:
+<p class="text" id="intro">Element C</p>
+
+Zutreffende Regeln:
+- Regel 1: p → blau → 1 Punkt
+- Regel 2: .text → rot → 10 Punkte
+- Regel 3: p.text → grün → 11 Punkte
+- Regel 4: #intro → orange → 100 Punkte
+- Regel 5: body p → grau → 2 Punkte
+
+Gewinner: Regel 4 (#intro) mit 100 Punkten
+Endfarbe: orange
+
+
+Element D
+
+HTML:
+<div class="text">Element D</div>
+
+Zutreffende Regeln:
+- Regel 2: .text → rot → 10 Punkte
+
+Gewinner: Regel 2 (.text) mit 10 Punkten
+Endfarbe: rot
+
+
+Endergebnis:
+- Element A → grau
+- Element B → grün
+- Element C → orange
+- Element D → rot

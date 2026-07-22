@@ -1,0 +1,5 @@
+/* Regel 1 */ p    { color: blue; }
+/* Regel 2 */ .text { color: red; }
+/* Regel 3 */ p.text { color: green; }
+/* Regel 4 */ #intro { color: orange; }
+/* Regel 5 */ body p { color: gray; }

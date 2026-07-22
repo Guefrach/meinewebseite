@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Einzeiliger Text -->
+<input type="text" name="name" placeholder="Name und Nachname">
+
+<!-- E-Mail — Browser prüft Format -->
+<input type="email" name="email" placeholder="name@example.com">
+
+<!-- Zahl — zeigt Pfeil-Steuerung -->
+<input type="number" name="alter" placeholder= "alter" min="0" max="120"> 
+
+<!-- Passwort — Zeichen werden verdeckt -->
+<input type="password" name="pw" placeholder="password">
+
+<!-- Datum — zeigt Kalender-Picker -->
+<input type="date" name="geburtsdatum">
+
+<!-- Telefonnummer -->
+<input type="tel" name="telefon" placeholder="+49 ...">
+
+<!-- URL — Browser prüft Format -->
+<input type="url" name="webseite" placeholder="https://...">
+
+<!-- Verstecktes Feld — unsichtbar, aber wird mitgesendet -->
+<input type="hidden" name="quelle" value="kontaktseite">
+
+<form action="/kontakt" method="post">
+<label for="name">Name</label>
+<input type="text" id="name" name="name"
+placeholder="Vor- und Nachname">
+<label for="email">E-Mail-Adresse</label>
+<input type="email" id="email" name="email"
+placeholder="name@example.com">
+<button type="submit">Nachricht senden</button>
+
+<fieldset>
+<legend>Interessen</legend>
+<label>
+HTML
+</label>
+<input type="checkbox" name="interesse" value="html">
+<label>
+CSS
+</label>
+<input type="checkbox" name="interesse" value="css">
+<label>
+JavaScript
+</label>
+<input type="checkbox" name="interesse" value="js">
+</fieldset>
+
+<fieldset>
+
+<legend>Erfahrung</legend>
+<label>
+Einsteiger
+</label>
+<input type="radio" name="level" value="anfaenger">
+
+<label>
+Fortgeschrittene
+</label>
+<input type="radio" name="level" value="fortgeschritten">
+
+<label>
+Profi
+</label>
+<input type="radio" name="level" value="profi">
+</fieldset>
+
+<fieldset>
+<legend>Kontaktdaten</legend>
+<label for="name">Name</label>
+<input type="text" id="name" name="name">
+<label for="email">E-Mail</label>
+<input type="email" id="email" name="email">
+</fieldset>
+
+</form>
+</body>
+</html>

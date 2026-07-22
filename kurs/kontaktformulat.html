@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/kontakt" method="post">
+<fieldset>
+<legend>Persönliche Daten</legend>
+<label for="vorname">Vorname</label>
+<input type="text" name="vorname" id="vorname"
+required minlength="2">
+<label for="nachname">Nachname</label>
+<input type="text" name="nachname" id="nachname"
+required minlength="2">
+<label for="email" > E-Mail-Adresse </label>
+<input type="email" name="email" id="email" required>
+<label for="telefon">Telefon</label>
+<input type="tel" name="telefon" id="telefon">
+<label for="geburtsdatum">Geburtsdatum</label>
+<input type="date" name="geburtsdatum" id="geburtsdatum">
+</fieldset>
+<fieldset>
+<legend>Nachricht</legend>
+<label for="betreff">Betreff</label>
+<select id="betreff" name="betreff">
+<option value="" disabled selected>— Bitte wählen —</option>
+<option value="frage">Allgemeine Frage</option>
+<option value="angebot">Angebotsanfrage</option>
+<option value="feedback">Feedback</option>
+<option value="sonstiges">Sonstiges</option>
+</select>
+<label for="nachricht">Nachricht</label>
+
+<textarea id="nachricht" name="nachricht" rows="6" required minlength="20"></textarea>
+</fieldset>
+<fieldset>
+<button type="submit">Nachricht absenden</button>
+</form>
+</body>
+</html>

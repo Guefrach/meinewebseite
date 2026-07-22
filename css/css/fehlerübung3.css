@@ -1,0 +1,68 @@
+/* Regel A */
+h1 {
+color: gray;
+}
+/* Regel B */
+.gross {
+color: red; font-size: 3rem;
+/* (1) Warum gilt diese Farbe nicht? */
+}
+/* Regel C */
+#titel {
+color: darkblue;
+}
+/* Regel D */
+.text {
+color: green;
+}
+/* Regel E */
+p {
+color: orange; }
+/* Regel F */
+#intro {
+color: purple;
+}
+/* Regel G */
+p {
+color: black; line-height: 1.4;
+/* (2) Warum gilt diese Farbe nicht für .text? */
+/* (3) Warum gilt diese Farbe für Absätze mit .text nicht? */ 
+}
+
+1. Betroffene Regeln:
+Regel A: h1 → gray (1 Punkt)
+Regel B: .gross → red (10 Punkte)
+Regel C: #titel → darkblue (100 Punkte)
+Tatsächliche Farbe: 🔵 darkblue
+Gewinner: Regel C (#titel)
+Warum?
+ID-Selektor hat 100 Punkte.
+Klasse .gross hat nur 10 Punkte.
+Element h1 hat nur 1 Punkt.
+Die stärkste Regel gewinnt.
+
+2. <p class="text">Erster Absatz</p>
+Betroffene Regeln:
+Regel D: .text → green (10 Punkte)
+Regel E: p → orange (1 Punkt)
+Regel G: p → black (1 Punkt)
+Tatsächliche Farbe: 🟢 green
+Gewinner: Regel D (.text)
+Warum?
+.text hat 10 Punkte.
+p hat nur 1 Punkt.
+Die Klasse ist stärker als der Element-Selektor.
+
+3. <p class="text" id="intro">Zweiter Absatz</p>
+Betroffene Regeln:
+Regel D: .text → green (10 Punkte)
+Regel E: p → orange (1 Punkt)
+Regel F: #intro → purple (100 Punkte)
+Regel G: p → black (1 Punkt)
+Tatsächliche Farbe: 🟣 purple
+Gewinner: Regel F (#intro)
+Warum?
+#intro hat 100 Punkte.
+.text hat nur 10 Punkte.
+p hat nur 1 Punkt.
+Die ID überschreibt Klasse und Element.

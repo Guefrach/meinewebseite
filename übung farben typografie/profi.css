@@ -1,0 +1,46 @@
+/* Google Font verwenden */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #F5F5F5; /* Hintergrundfarbe */
+    color: #222222; /* normale Textfarbe */
+}
+
+/* Kopfbereich */
+header {
+    background-color: #a9d7c7; /* eigene Hintergrundfarbe */
+    color: rgb(92, 41, 41);
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Untertitel kleiner und heller */
+.untertitel {
+    font-size: 1rem;
+    color: #4181b5;
+}
+
+/* Überschriften */
+h2 {
+    color: #34a1db; /* Akzentfarbe */
+}
+
+/* Liste */
+li {
+    color: #b07714; /* andere Farbe als normale Textfarbe */
+}
+
+/* Fußbereich */
+footer {
+    background-color: #3c887b;
+    color: rgb(59, 3, 3);
+    padding: 15px;
+}
+
+.fusszeile {
+    text-align: center;
+    font-size: 0.8rem;
+}

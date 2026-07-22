@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    background-color: #a6ec92;
+}
+
+h1 {
+    color: #0b0bf1;
+    font-size: 2rem;
+}
+
+p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+a {
+    color: rgb(138, 180, 70);
+    text-decoration: none;
+}

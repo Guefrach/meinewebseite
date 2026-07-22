@@ -1,0 +1,31 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.intro {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.quelle {
+    font-size: 0.85;
+    color: #888;
+}
+
+
